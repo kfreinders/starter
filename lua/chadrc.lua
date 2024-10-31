@@ -6,12 +6,23 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "gruvchad",
+    transparency = false,
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
+
+M.ui = {
+    statusline = {
+        separator_style = "arrow",
+    }
+}
+--
+-- M.term = {
+--   winopts = { number = true, relativenumber = true },
+-- }
 
 return M
