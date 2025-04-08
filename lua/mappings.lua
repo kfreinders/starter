@@ -38,3 +38,7 @@ map("n", "<leader>4", function()
   local harpoon = require "harpoon"
   harpoon:list():select(4)
 end, { desc = "󱪼 Navigate to file 4" })
+
+-- dap
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "DAP Toggle breakpoint" })
+map("n", "<leader>dr", "<cmd> DapContinue <CR>", { desc = "DAP Start or continue debugger" })

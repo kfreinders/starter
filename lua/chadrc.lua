@@ -15,14 +15,11 @@ M.base46 = {
 	-- },
 }
 
-M.ui = {
-    statusline = {
-        separator_style = "arrow",
-    }
-}
---
--- M.term = {
---   winopts = { number = true, relativenumber = true },
--- }
+-- M.nvdash = { load_on_startup = true }
+-- M.ui = {
+--       tabufline = {
+--          lazyload = false
+--      }
+--}
 
 return M
