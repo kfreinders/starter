@@ -11,6 +11,9 @@ map("i", "jk", "<ESC>")
 map("n", "<F5>", "<cmd> ! python3 % <CR>", { desc = "Run Python3 script" })
 map("n", "<leader>bb", "<cmd> ! black % <CR> ", { desc = "Run Black formatter" })
 map("n", "<leader>gg", ":LazyGit <CR>", { desc = "Open LazyGit" })
+map("n", "<leader>d", function()
+  vim.cmd("DogeGenerate")
+end, { desc = "Generate docstring" })
 
 -- harpoon
 map("n", "<leader>ha", function()
