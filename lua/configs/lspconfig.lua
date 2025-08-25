@@ -1,20 +1,7 @@
 require("nvchad.configs.lspconfig").defaults()
-
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
-
--- EXAMPLE
-local servers = { "html", "cssls", "ts_ls", "pyright", "texlab" }
 local nvlsp = require "nvchad.configs.lspconfig"
-
--- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-  }
-end
 
 lspconfig.clangd.setup({
   on_attach = nvlsp.on_attach,
@@ -66,3 +53,6 @@ for _, method in ipairs({ "textDocument/diagnostic", "workspace/diagnostic" }) d
     return default_diagnostic_handler(err, result, context, config)
   end
 end
+
+local servers = { "html", "cssls", "ts_ls", "pyright", "texlab" }
+vim.lsp.enable(servers)
