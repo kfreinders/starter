@@ -2,18 +2,20 @@ require "nvchad.options"
 local autocmd = vim.api.nvim_create_autocmd
 local opt = vim.opt
 
--- Override NvChad indentation and line numbers
-autocmd("BufEnter", {
-  pattern = "*",
-  callback = function ()
-    opt.expandtab = true
-    opt.shiftwidth = 4
-    opt.smartindent = true
-    opt.tabstop = 4
-    opt.softtabstop = 4
-    opt.relativenumber = true
-  end
-})
+-- -- Override NvChad indentation and line numbers
+-- autocmd("BufEnter", {
+--   pattern = "*",
+--   callback = function ()
+--     opt.expandtab = true
+--     opt.shiftwidth = 4
+--     opt.smartindent = true
+--     opt.tabstop = 4
+--     opt.softtabstop = 4
+--     opt.relativenumber = true
+--   end
+-- })
+
+vim.o.rnu = true
 
 -- Vertical ruler
 autocmd("VimEnter", {
