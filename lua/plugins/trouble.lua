@@ -6,18 +6,23 @@ return {
   keys = {
     {
       "<leader>tx",
+      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+      desc = "Buffer Diagnostics (Trouble)",
+    },
+    {
+      "<leader>tX",
       "<cmd>Trouble diagnostics toggle<cr>",
       desc = "Diagnostics (Trouble)",
     },
     {
       "<leader>tt",
-      "<cmd>Trouble todo toggle<cr>",
-      desc = "Trouble TODO (Trouble)",
+      "<cmd>Trouble todo toggle filter.buf=0<cr>",
+      desc = "Buffer TODO (Trouble)",
     },
     {
-      "<leader>tX",
-      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-      desc = "Buffer Diagnostics (Trouble)",
+      "<leader>tT",
+      "<cmd>Trouble todo toggle<cr>",
+      desc = "TODO (Trouble)",
     },
     {
       "<leader>ts",
